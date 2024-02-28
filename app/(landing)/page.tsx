@@ -1,51 +1,89 @@
 import Image from "next/image";
+import { ToastContainer } from "react-toastify";
+import { WavyBackground } from "../components/ui/wavy-background";
+import { FaClipboardList, FaClipboardUser } from "react-icons/fa6";
+import { EmailList } from "../components/waitlist/emailList";
+import MintSec from "../components/mint-nft/mint-sec";
 
 export default function Home() {
   return (
-    <main className="w-full min-h-screen  bg-black text-white flex items-center justify-center flex-col p-10">
+    <main className="min-h-screen w-full bg-[#000] text-white">
+      <WavyBackground>
+        <div className="w-full p-3 h-[400px] mb-[100px] flex items-center justify-center">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-5xl font-bold mb-4 capitalize">
+              Need some help with your tech problems
+            </h2>
+            <p className="text-2xl font-bold mb-3">
+              Hi, lyub de Cyber Developer is here to help.
+            </p>
 
-      <div className="sm:w-[300px] md:w-[800px] lg-[1080px] flex items-center justify-center flex-col gap-10">
-
-        <section className="bg-[#111] mx-auto w-full h-[400px] flex items-center justify-center flex-col gap-3 rounded-m ">
-          <div className="w-[300px] h-[300px] relative shadow-lg">
-            <Image src="/TestConflict.png" alt="profile-image" fill />
+            <p className="text-sm lowercase text-gray-300 font-semibold text-shadow-lg w-[80%] mx-auto">
+              Struggling trying to get the internet working, cant seem to get
+              enough attention for your buisness, need a website or a smart
+              contract? I can you with that..
+            </p>
           </div>
+        </div>
 
-          <h2 className="text-2xl font-bold">Howdy de name is lyub</h2>
-          <p className="text-md text-gray-500">
-            Welcome to my service, what can i help you with
-          </p>
-        </section>
+        <div className="w-full p-3 h-[400px] flex flex-col items-center justify-center">
+          <Image
+            src="/TestConflict.png"
+            alt="lyub"
+            width={300}
+            height={300}
+            className="mb-5"
+          />
 
-        <section className="bg-[#111] mx-auto w-full h-[400px] ">
-          <h2>Need a blog</h2>
-          <p>
-            Sit down and contact me we will be able to come up with a good
-            looking blog where you will be able to either build and allow your
-            community to build their own blogs
-          </p>
-        </section>
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl font-bold captilize mb-2">
+              It only takes you to make a change
+            </h2>
 
-        <section className="bg-[#111] mx-auto w-full h-[400px]"> 
-          <h2>Need a NFT collection</h2>
-          <p>
-            Do you want to have create a community based of an image? allow
-            people to minting official images and sell them on the open market
-            if they wanted to?
-          </p>
-        </section>
+            <p className="text-sm">
+              Follow me through my little journey, if you are interested I am
+              going this is a small blog website where I basically introduce
+              myself, try to create a team and spread some knowledge and the
+              place to be if you want to know when I will be laucnhing my next
+              project
+            </p>
 
-        <section className="bg-[#111] mx-auto w-full h-[400px]">
-          <h2>Own a buisness, a lot of work and need an ai to help</h2>
-          <p>
-            Setup a AI client built to help you buisness, either answer
-            questions about your buisness or review your documents and generate
-            your yearly statement
-          </p>
-        </section>
+            <p className="font-bold mt-2">Dont be a loser, spread some love</p>
 
-      </div>
+            <div>
+              <div className="flex items-center gap-2  mt-10">
+                <a
+                  href="/about"
+                  className="block w-full text-sm text-[#f4f4f4]  hover:text-white"
+                >
+                  <FaClipboardUser className="w-[32px] h-[32px] block mx-auto" />
+                  <p className="font-bold mt-2 uppercase">about</p>
+                </a>
+                <a
+                  href="/services"
+                  className="block w-full text-sm text-[#f4f4f4]  hover:text-white"
+                >
+                  <FaClipboardUser className="w-[32px] h-[32px] block mx-auto" />
+                  <p className="font-bold mt-2 uppercase">services</p>
+                </a>
+                <a
+                  href="/contact"
+                  className="block w-full text-sm text-[#f4f4f4]  hover:text-white"
+                >
+                  <FaClipboardList className="w-[32px] h-[32px] block mx-auto" />
+                  <p className="font-bold mt-2 uppercase">contact</p>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </WavyBackground>
 
+      <EmailList />
+
+      <MintSec />
+
+      <ToastContainer />
     </main>
   );
 }
