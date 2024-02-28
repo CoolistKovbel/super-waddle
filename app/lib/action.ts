@@ -25,11 +25,11 @@ async function init() {
 export async function whiteList(formData: FormData) {
   const email = formData.get("email");
 
-  if (db === undefined) {
-    await init();
-  }
-
   try {
+    if (db === undefined) {
+      await init();
+    }
+
     const NewMember = new WaitList({
       email: email,
     });
