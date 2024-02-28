@@ -12,21 +12,24 @@ async function init() {
   try {
     db = await dbConnect();
 
-    console.log(db)
+    console.log(db);
   } catch (error) {
     console.log("Error kill yourself");
   }
 }
 
 (async () => {
-  await init()
+  await init();
 })();
 
 export async function whiteList(formData: FormData) {
   const email = formData.get("email");
 
-  try {
+  if (db === undefined) {
+    await init();
+  }
 
+  try {
     const NewMember = new WaitList({
       email: email,
     });
