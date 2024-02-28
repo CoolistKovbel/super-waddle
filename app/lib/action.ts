@@ -5,11 +5,27 @@ import dbConnect from "./db";
 import { sendMail } from "./mail";
 import { SendContactEmail } from "./schema";
 
+let db: any | undefined;
+
+async function init() {
+  if (db) return;
+  try {
+    db = await dbConnect();
+
+    console.log(db)
+  } catch (error) {
+    console.log("Error kill yourself");
+  }
+}
+
+(async () => {
+  await init()
+})();
+
 export async function whiteList(formData: FormData) {
   const email = formData.get("email");
 
   try {
-    await dbConnect();
 
     const NewMember = new WaitList({
       email: email,
