@@ -23,7 +23,7 @@ const Page = async () => {
             <ul className="flex gap-4">
               <li>
                 <a
-                  href="/https://twitter.com/lyub24"
+                  href="https://twitter.com/lyub24"
                   target="_blank"
                   className="text-blue-400 hover:text-blue-300"
                 >
@@ -40,7 +40,7 @@ const Page = async () => {
 
           <div>
             <h3 className="text-xl font-semibold mb-2">Or Drop an Email:</h3>
-            <p className="text-gray-400">lyub@gg.com</p>
+            <p className="text-gray-400">noEmail@yet.com</p>
           </div>
         </div>
       </div>
