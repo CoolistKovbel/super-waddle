@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import React from 'react'
 import MintButton from './mint-btn'
+import Link from 'next/link'
 
 
 const MintSec = () => {
@@ -33,6 +34,7 @@ const MintSec = () => {
           <p className="text-lg font-semibold">
             Minting one person account
           </p>
+          <Link href="/mintfq">Learn More</Link>
         </div>
       </div>
 

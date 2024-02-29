@@ -6,7 +6,7 @@ declare global {
 
 const MONGODB_URI = process.env.DATABASE_URL!;
 
-
+console.log(process.env.DATABASE_URL as string)
 
 if (!MONGODB_URI) {
   throw new Error(
@@ -42,4 +42,4 @@ async function dbConnect() {
   return cached.conn;
 }
 
-export default dbConnect;
+export default dbConnect; 

@@ -11,7 +11,7 @@ const MainHeader = () => {
       <nav className="w-[200px] text-[10px] font-bold uppercase flex items-center justify-between">
         <Link href="/about" className="hover:text-emerald-500 hover:underline">About</Link>
         <Link href="/contact" className="hover:text-emerald-500 hover:underline">Contact</Link>
-        <Link href="/contact" className="hover:text-emerald-500 hover:underline">Services</Link>
+        <Link href="/services" className="hover:text-emerald-500 hover:underline">Services</Link>
       </nav>
     </header>
   );
