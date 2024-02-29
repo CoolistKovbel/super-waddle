@@ -3,7 +3,7 @@ import React from "react";
 
 const Page = () => {
   return (
-    <section className="min-h-screen w-full bg-[#000] text-white">
+    <main className="min-h-screen w-full bg-[#000] text-white">
       <header className="w-full p-10">
 
         <h2 className="text-5xl md:text-6xl font-bold mb-2">About ME</h2>
@@ -101,7 +101,7 @@ const Page = () => {
         </blockquote>
       </div> */}
 
-    </section>
+    </main>
   );
 };
 
