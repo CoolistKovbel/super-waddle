@@ -12,7 +12,10 @@ const Page = () => {
           Name: <span className="text-yellow-500">Lyubomyr Kovbel</span>
         </p>
         <p className="font-bold text-[1.2rem]">
-          skills: <span className="text-yellow-500">html, css, scss, javascript, python, react, nextjs, mongodb, sql, solidity,</span>
+          Skills: <span className="text-yellow-500">html, css, scss, javascript, react, nextjs, mongodb, solidity</span>
+        </p>
+        <p className="font-bold text-[1.2rem]">
+          contemplating: <span className="text-yellow-500">python, sql, php, </span>
         </p>
         <p className="font-bold text-[1.2rem]">
           Age: <span className="text-yellow-500">24</span>
