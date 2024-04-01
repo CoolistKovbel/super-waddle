@@ -11,11 +11,8 @@ const Page = async () => {
         </p>
       </header>
 
-
       <div className="w-[340px] md:w-[80%] flex items-center justify-center gap-4 flex-col">
-
         <section className="w-full bg-[#222] border-2 p-3 shadow-lg rounded-md">
-
           <header className="mb-3 ">
             <h2 className="text-2xl font-bold">Web devlopment</h2>
             <p className="text-sm">
@@ -26,21 +23,27 @@ const Page = async () => {
 
           <ul className="list-disc p-5">
             <li>
-              <span className="bg-[#000] inline-block p-1 rounded-md">Front End development</span>
+              <span className="bg-[#000] inline-block p-1 rounded-md">
+                Front End development
+              </span>
               <ul>
                 <li>Build out the UI design of the website</li>
                 <li>Help build out certain UI component</li>
               </ul>
             </li>
             <li>
-              <span className="bg-[#000] inline-block p-1 rounded-md">Back End development</span>
+              <span className="bg-[#000] inline-block p-1 rounded-md">
+                Back End development
+              </span>
               <ul>
                 <li>Build a rest api</li>
                 <li>Build out authentication setup</li>
               </ul>
             </li>
             <li>
-              <span className="bg-[#000] inline-block p-1 rounded-md">Full stack development</span>
+              <span className="bg-[#000] inline-block p-1 rounded-md">
+                Full stack development
+              </span>
               <p>
                 cover both front end and backend devlopment built towards your
                 desire
@@ -60,18 +63,24 @@ const Page = async () => {
           </header>
           <ul className="list-disc p-5">
             <li>
-              <span className="bg-[#000] inline-block p-1 rounded-md">Smart Contract Development</span>
+              <span className="bg-[#000] inline-block p-1 rounded-md">
+                Smart Contract Development
+              </span>
               <ul>
                 <li>Audit smart contract</li>
                 <li>Build out smart contract towards your desire</li>
               </ul>
             </li>
             <li>
-              <span className="bg-[#000] inline-block p-1 rounded-md">Blockchain Development</span>
+              <span className="bg-[#000] inline-block p-1 rounded-md">
+                Blockchain Development
+              </span>
               <p>Buid an application connected with smart contract </p>
             </li>
             <li>
-              <span className="bg-[#000] inline-block p-1 rounded-md">Blockchain FullStack Development</span>
+              <span className="bg-[#000] inline-block p-1 rounded-md">
+                Blockchain FullStack Development
+              </span>
               <p>
                 Buid an application connected with smart contract and database{" "}
               </p>
@@ -79,13 +88,12 @@ const Page = async () => {
           </ul>
         </section>
 
-
         <section className="w-full bg-[#222] border-2 p-3 shadow-lg rounded-md">
           <header className="mb-3">
             <h2 className="text-2xl font-bold">Project Development</h2>
             <p className="text-sm">
-              Dont have an idea of what you want, want something that will make you
-              stand out and look cool
+              Dont have an idea of what you want, want something that will make
+              you stand out and look cool
             </p>
           </header>
 
@@ -96,13 +104,50 @@ const Page = async () => {
             <li>Token Faucet website</li>
           </ul>
         </section>
-      </div>
 
+        <section className="w-full bg-[#222] border-2 p-3 shadow-lg rounded-md">
+          <h2 className="text-2xl font-bold">Basic Computer & Phone Support</h2>
+          <ul>
+            <li>
+              <span>Macbook Reboot Basic</span>
+              <ul>
+                <li>Schedule meet up</li>
+              </ul>
+              <div>
+                <h3>Spring boot</h3>
+
+                <p>Refresh macbook</p>
+              </div>
+            </li>
+
+            <li>
+              <span>Windows 8 Reboot Basic</span>
+              <ul>
+                <li>Schedule meet up</li>
+              </ul>
+              <div>
+                <h3>Spring boot</h3>
+
+                <p>Refresh windows PC</p>
+              </div>
+            </li>
+
+            <li>
+              Phone Reboot Basic
+              <ul>
+                <li>Schedule meet up</li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+      </div>
 
       <footer className="p-4 text-sm text-gray-500">
         <p>
-          payment will verry, I am planing to except only <span className="underline">crypto currency</span> for my
-          service but if you want an express build I will have a <span className="underline">stripe payment </span>
+          payment will verry, I am planing to except only{" "}
+          <span className="underline">crypto currency</span> for my service but
+          if you want an express build I will have a{" "}
+          <span className="underline">stripe payment </span>
           system which you could follow
         </p>
       </footer>
