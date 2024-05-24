@@ -16,7 +16,7 @@ export default function Home() {
               Have tech problems or need some assistance?
             </h2>
             <p className="text-2xl font-bold mb-3">
-              Hi, lyub de Cyber Developer is here to help.
+              Ecostatic
             </p>
 
             <p className="text-sm lowercase text-gray-300 font-semibold text-shadow-lg w-[80%] mx-auto">
@@ -28,6 +28,7 @@ export default function Home() {
         </div>
 
         <div className="w-full p-3 h-[400px] flex flex-col items-center justify-center">
+
           <Image
             src="/TestConflict.png"
             alt="lyub"
@@ -37,6 +38,7 @@ export default function Home() {
           />
 
           <div className="max-w-4xl mx-auto text-center">
+            
             <h2 className="text-4xl font-bold captilize mb-2">
               With Tech advancing and programs updating its sometimes hard to
               keep up
@@ -51,7 +53,9 @@ export default function Home() {
             <p className="font-bold mt-2">Dont be a loser, spread some love</p>
 
             <div>
+
               <div className="flex items-center gap-2  mt-10">
+
                 <Link
                   href="/about"
                   className="block w-full text-sm text-[#f4f4f4]  hover:text-white"
@@ -59,6 +63,7 @@ export default function Home() {
                   <FaClipboardUser className="w-[32px] h-[32px] block mx-auto" />
                   <p className="font-bold mt-2 uppercase">about</p>
                 </Link>
+
                 <Link
                   href="/services"
                   className="block w-full text-sm text-[#f4f4f4]  hover:text-white"
@@ -66,6 +71,7 @@ export default function Home() {
                   <FaClipboardUser className="w-[32px] h-[32px] block mx-auto" />
                   <p className="font-bold mt-2 uppercase">services</p>
                 </Link>
+
                 <Link
                   href="/contact"
                   className="block w-full text-sm text-[#f4f4f4]  hover:text-white"
@@ -73,6 +79,7 @@ export default function Home() {
                   <FaClipboardList className="w-[32px] h-[32px] block mx-auto" />
                   <p className="font-bold mt-2 uppercase">contact</p>
                 </Link>
+
                 <Link
                   href="/portfolio"
                   className="block w-full text-sm text-[#f4f4f4]  hover:text-white"
@@ -80,10 +87,15 @@ export default function Home() {
                   <FaClipboardList className="w-[32px] h-[32px] block mx-auto" />
                   <p className="font-bold mt-2 uppercase">porfolio</p>
                 </Link>
+
               </div>
+
             </div>
+
           </div>
+
         </div>
+
       </WavyBackground>
 
       <EmailList />
@@ -91,6 +103,7 @@ export default function Home() {
       <MintSec />
 
       <ToastContainer />
+
     </main>
   );
 }

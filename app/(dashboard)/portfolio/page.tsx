@@ -1,13 +1,38 @@
+
 const Page = async () => {
+  
   const projects = [
     {
-      title: "deG4ntl4m4n",
-      type: "Blog",
-      category:  "LIFE",
+      title: "entropic",
+      type: "NFTListingPlace",
+      category: "LIFE",
       profojetImage: "/banner-test.png",
-      desription:
-        "Tail shankle turkey pork chop, prosciutto ground round andouille leberkas capicola chicken pork loin. Tri-tip picanha pig, alcatra tongue bresaola pork belly corned beef. Cow sirloin burgdoggen, rump picanha tri-tip turkey kielbasa ham ribeye boudin shank chislic. Pancetta chuck frankfurter swine jerky strip steak tongue alcatra. Tenderloin pastrami pancetta strip steak, cow jowl doner pork. Pastrami ground round tri-tip, chuck salami swine buffalo. Tri-tip hamburger short loin andouille.",
+      desription: `A small decentralized application invovles solidity and javascript
+        using, ethers and nextjs, and typescript to created this project. A
+        user is allowed to list erc-721 token collection that either are
+        created by themselves or support pioneers.`,
     },
+    {
+      title: "mysticmurkoXD",
+      type: "NFTChatApp",
+      category: "LIFE",
+      profojetImage: "/banner-test.png",
+      desription: `A small decentralized application invovles solidity and javascript
+        using, ethers and nextjs, and typescript to created this project. A
+        user is allowed to list erc-721 token collection that either are
+        created by themselves or support pioneers.`,
+    },
+    {
+      title: "pinnote",
+      type: "NFTChatApp",
+      category: "LIFE",
+      profojetImage: "/banner-test.png",
+      desription: `A small decentralized application invovles solidity and javascript
+        using, ethers and nextjs, and typescript to created this project. A user is able to join a group of 3 members who also have the nft collection`,
+    },
+    {
+
+    }
   ];
 
   return (
@@ -18,7 +43,16 @@ const Page = async () => {
 
       <section>
         <h2>Recent Project:</h2>
-        
+
+        {/* Card container */}
+
+        {projects.map((item) => (
+          <div key={crypto.randomUUID()}>
+            <h2>{item.title}</h2>
+            <p>{item.desription}</p>
+            <span>{item.type}</span>
+          </div>
+        ))}
       </section>
     </main>
   );
