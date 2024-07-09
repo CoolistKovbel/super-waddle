@@ -11,7 +11,7 @@ const Page = async () => {
         </p>
       </header>
 
-      <div className="w-[340px] md:w-[80%] flex items-center justify-center gap-4 flex-col">
+      <div className="w-[90%]  md:w-[80%] flex items-center justify-center gap-4 flex-col">
         <section className="w-full bg-[#222] border-2 p-3 shadow-lg rounded-md">
           <header className="mb-3 ">
             <h2 className="text-2xl font-bold">Web devlopment</h2>

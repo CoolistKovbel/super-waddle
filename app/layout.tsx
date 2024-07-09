@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "./globals.css";
 import MainHeader from "./components/main-header/main-header";
+import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "lyubTHEBEST1",
+  title: "Portfolio",
   description: "De Independent Cyber Developer",
 };
 

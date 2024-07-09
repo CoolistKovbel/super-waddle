@@ -1,9 +1,7 @@
-
 const Page = async () => {
-  
   const projects = [
     {
-      title: "entropic",
+      title: "Ephotopicup",
       type: "NFTListingPlace",
       category: "LIFE",
       profojetImage: "/banner-test.png",
@@ -13,7 +11,7 @@ const Page = async () => {
         created by themselves or support pioneers.`,
     },
     {
-      title: "mysticmurkoXD",
+      title: "mysticmurko",
       type: "NFTChatApp",
       category: "LIFE",
       profojetImage: "/banner-test.png",
@@ -31,8 +29,38 @@ const Page = async () => {
         using, ethers and nextjs, and typescript to created this project. A user is able to join a group of 3 members who also have the nft collection`,
     },
     {
+      title: "BondaRise",
+      type: "PastryShop",
+      category: "LIFE",
+      profojetImage: "/banner-test.png",
+      desription: `A small decentralized application invovles solidity and javascript
+        using, ethers and nextjs, and typescript to created this project. A user is able order pastries and get discount.`,
+    },
+    {
+      title: "PrimeBlossom",
+      type: "FlowerShop",
+      category: "LIFE",
+      profojetImage: "/banner-test.png",
+      desription: `A small decentralized application invovles solidity and javascript
+        using, ethers and nextjs, and typescript to created this project. A user is able order flowers and get discount.`,
+    },
+    {
+      title: "Phontunelightway",
+      type: "defi app",
+      category: "LIFE",
+      profojetImage: "/banner-test.png",
+      desription: `A small decentralized application invovles solidity and javascript
+        using, ethers and nextjs, and typescript to created this project. `,
+    },
+    {
+      title: "ProPhaseFaucet",
+      type: "defi app",
+      category: "LIFE",
+      profojetImage: "/banner-test.png",
+      desription: `A small decentralized application invovles solidity and javascript
+        using, ethers and nextjs, and typescript to created this project. `,
+    },
 
-    }
   ];
 
   return (
@@ -40,6 +68,7 @@ const Page = async () => {
       <header>
         <h2>Portfolio page</h2>
       </header>
+
 
       <section>
         <h2>Recent Project:</h2>
