@@ -1,49 +1,7 @@
 const Page = async () => {
+  
   const projects = [
-    {
-      title: "Ephotopicup",
-      type: "NFTListingPlace",
-      category: "LIFE",
-      profojetImage: "/banner-test.png",
-      desription: `A small decentralized application invovles solidity and javascript
-        using, ethers and nextjs, and typescript to created this project. A
-        user is allowed to list erc-721 token collection that either are
-        created by themselves or support pioneers.`,
-    },
-    {
-      title: "mysticmurko",
-      type: "NFTChatApp",
-      category: "LIFE",
-      profojetImage: "/banner-test.png",
-      desription: `A small decentralized application invovles solidity and javascript
-        using, ethers and nextjs, and typescript to created this project. A
-        user is allowed to list erc-721 token collection that either are
-        created by themselves or support pioneers.`,
-    },
-    {
-      title: "pinnote",
-      type: "NFTChatApp",
-      category: "LIFE",
-      profojetImage: "/banner-test.png",
-      desription: `A small decentralized application invovles solidity and javascript
-        using, ethers and nextjs, and typescript to created this project. A user is able to join a group of 3 members who also have the nft collection`,
-    },
-    {
-      title: "BondaRise",
-      type: "PastryShop",
-      category: "LIFE",
-      profojetImage: "/banner-test.png",
-      desription: `A small decentralized application invovles solidity and javascript
-        using, ethers and nextjs, and typescript to created this project. A user is able order pastries and get discount.`,
-    },
-    {
-      title: "PrimeBlossom",
-      type: "FlowerShop",
-      category: "LIFE",
-      profojetImage: "/banner-test.png",
-      desription: `A small decentralized application invovles solidity and javascript
-        using, ethers and nextjs, and typescript to created this project. A user is able order flowers and get discount.`,
-    },
+ 
     {
       title: "Phontunelightway",
       type: "defi app",
@@ -53,35 +11,42 @@ const Page = async () => {
         using, ethers and nextjs, and typescript to created this project. `,
     },
     {
-      title: "ProPhaseFaucet",
+      title: "BeaconPulseWave",
       type: "defi app",
-      category: "LIFE",
+      category: "DEFI",
       profojetImage: "/banner-test.png",
       desription: `A small decentralized application invovles solidity and javascript
         using, ethers and nextjs, and typescript to created this project. `,
     },
-
   ];
 
   return (
-    <main className="min-h-screen w-full bg-[#111] text-white flex items-center justify-center">
-      <header>
-        <h2>Portfolio page</h2>
+    <main className="min-h-screen w-full bg-[#111] text-white flex items-center justify-cente flex-col">
+
+      <header className="p-4 text-2xl">
+        <h2 className="font-bold">Portfolio page</h2>
       </header>
 
 
-      <section>
-        <h2>Recent Project:</h2>
+      <section className="w-full h-[800px] overflow-auto ">
+
+        <h2 className="text-center p-4 ">Recent Project:</h2>
 
         {/* Card container */}
+        <div className="flex items-center justify-center flex-col ">
 
-        {projects.map((item) => (
-          <div key={crypto.randomUUID()}>
-            <h2>{item.title}</h2>
-            <p>{item.desription}</p>
-            <span>{item.type}</span>
-          </div>
-        ))}
+          {projects.map((item) => (
+            <div key={crypto.randomUUID()} className="w-[300px] h-[300px] p-4 relative  mt-10">
+              <header >
+                <h2 className="text-2xl">{item.title}</h2>
+                <p>{item.desription}</p>
+              </header>
+              <span className="absolute">{item.type}</span>
+            </div>
+          ))}
+        </div>
+
+
       </section>
     </main>
   );

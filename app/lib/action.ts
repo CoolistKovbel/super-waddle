@@ -1,5 +1,7 @@
 "use server";
 
+import { MoneyPaymentRequest } from "../models/MoneyPayment";
+import { ServiceRequest } from "../models/ServiceReq";
 import { WaitList } from "../models/WaitList";
 import dbConnect from "./db";
 
@@ -59,5 +61,63 @@ export async function ContactEmail(
   } catch (error) {
     console.log(error);
     return { message: "I am sorry but the request failed.... you got denied" };
+  }
+}
+
+export const requestServoce = async  (e:FormData) => {
+  const data = Object.fromEntries(e)
+
+  try {
+    console.log("send service request to servicer")
+
+
+    await dbConnect()
+
+    const newSerice = new ServiceRequest({
+      serviceType: data.serviceType,
+      serviceUserRequest: data.serviceUserRequest,
+      username: data.username,
+      useremail: data.email,
+    })
+
+    await newSerice.save()
+
+
+  return {
+    status: "success",
+    payload: ""
+  }
+
+    
+  } catch (error) {
+    console.log(error)
+  }
+}
+
+
+export const SendExpressPayment = async (e:FormData) =>{
+  const data = Object.fromEntries(e)
+  try {
+    // connecting to  the db 
+    await dbConnect()
+    // create a money order
+    const newOrder = new MoneyPaymentRequest({
+      MoneyPaymentID: data.transactoinId,
+      MetaAddress: data.metaAddress,
+    })
+    await newOrder.save()
+    // send money order
+
+    // record money order
+
+
+
+    return {
+      status: "success",
+      payload: newOrder
+    }
+
+  } catch (error) {
+    console.log("error",error)
   }
 }

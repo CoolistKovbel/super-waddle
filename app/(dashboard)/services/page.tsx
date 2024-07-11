@@ -1,4 +1,9 @@
+import ExpressRequest from "@/app/components/expressRequest";
+
 const Page = async () => {
+
+
+
   return (
     <main className="min-h-screen w-full bg-[#111] text-white flex items-center justify-center flex-col gap-4">
       {/* section header */}
@@ -12,6 +17,7 @@ const Page = async () => {
       </header>
 
       <div className="w-[90%]  md:w-[80%] flex items-center justify-center gap-4 flex-col">
+
         <section className="w-full bg-[#222] border-2 p-3 shadow-lg rounded-md">
           <header className="mb-3 ">
             <h2 className="text-2xl font-bold">Web devlopment</h2>
@@ -88,6 +94,15 @@ const Page = async () => {
           </ul>
         </section>
 
+        {/* 
+        
+          
+          TODO: finish up the payment system and server request option form... 
+        
+        
+        */}
+
+
         <section className="w-full bg-[#222] border-2 p-3 shadow-lg rounded-md">
           <header className="mb-3">
             <h2 className="text-2xl font-bold">Project Development</h2>
@@ -103,10 +118,12 @@ const Page = async () => {
             <li>NFT minting website</li>
             <li>Token Faucet website</li>
           </ul>
+
         </section>
 
         <section className="w-full bg-[#222] border-2 p-3 shadow-lg rounded-md">
           <h2 className="text-2xl font-bold">Basic Computer & Phone Support</h2>
+
           <ul>
             <li>
               <span>Macbook Reboot Basic</span>
@@ -139,8 +156,17 @@ const Page = async () => {
               </ul>
             </li>
           </ul>
+
         </section>
+
       </div>
+
+      {/* 
+
+          TODO: finish up the UI
+        
+      */}
+      <ExpressRequest />
 
       <footer className="p-4 text-sm text-gray-500">
         <p>
