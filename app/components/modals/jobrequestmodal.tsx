@@ -3,8 +3,12 @@
 import { requestServoce } from "@/app/lib/action";
 import { useModal } from "../hooks/use-modal-store";
 import { toast } from "react-toastify";
+import { useState } from "react";
+import { ethers } from "ethers";
+import { verifyMessage } from "ethers/lib/utils";
 
 const JobRequestModal = () => {
+  const [isValidSign, setValidSign] = useState(false);
   const { isOpen, onClose, type, signature } = useModal();
 
   const urlParts = window.location.href.split("/");
@@ -14,23 +18,22 @@ const JobRequestModal = () => {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-
+    const form = e.target as HTMLFormElement;
     const formData = new FormData(e.currentTarget);
     formData.append("sessoinUrl", desiredUrl);
 
     try {
       console.log("the user wants a service erquest");
 
+      const gg = await requestServoce(formData);
 
-
-      const gg = await requestServoce(formData)
-      
-      
-      if(gg?.status === "success"){
-        toast("Succesfully manage to crate a service please wait a few days till i can get back at you, i will try at yout earliest conviece." )
+      if (gg?.status === "success") {
+        toast(
+          "Succesfully manage to crate a service please wait a few days till i can get back at you, i will try at yout earliest conviece."
+        );
       }
 
-
+      form.reset();
 
       onClose();
     } catch (error) {
@@ -39,6 +42,32 @@ const JobRequestModal = () => {
     }
   };
 
+  const handleSignature = async () => {
+    try {
+      console.log("hadnling signature");
+      
+      const provider = new ethers.providers.Web3Provider(window.ethereum);
+      const signer = provider.getSigner();
+      const user = await signer.getAddress();
+
+      const message = "You are setting a order with ... lyub. Correct";
+      const sign = await signer.signMessage(message)
+
+
+
+      const confirm = await verifyMessage(message, sign);
+
+
+      const verifyiqueions = `soo ${user}, is going paying lyub ${sign} correct, here is the confirmation result; ${confirm}`;
+
+      toast(verifyiqueions);
+
+      setValidSign(true);
+      onClose();
+    } catch (error) {
+      console.log("erorr", error);
+    }
+  };
 
   const handleClose = () => {
     onClose();
@@ -51,7 +80,6 @@ const JobRequestModal = () => {
       }`}
     >
       <div className="bg-[#222] rounded-md p-4 w-[300px] md:w-[800px] overflow-auto h-[50%]">
-
         <div className="w-full h-full text-white flex justify-between flex-col relative">
           <h2 className="text-2xl md:text-4xl text-center font-bold">
             Request A servcie
@@ -61,7 +89,6 @@ const JobRequestModal = () => {
             onSubmit={handleSubmit}
             className="flex flex-col items-center justify-center bg-gray-900 p-6 rounded-lg shadow-lg "
           >
-
             <label htmlFor="username" className="text-white text-lg mb-2">
               Username:
             </label>
@@ -84,20 +111,27 @@ const JobRequestModal = () => {
               id="email"
             />
 
-
-            <label htmlFor="serviceType" className="text-white text-lg mb-2 w-full">
+            <label
+              htmlFor="serviceType"
+              className="text-white text-lg mb-2 w-full"
+            >
               Service Type
             </label>
-            <select name="serviceType" id="serviceType" className="bg-[#222] p-2">
+            <select
+              name="serviceType"
+              id="serviceType"
+              className="bg-[#222] p-2"
+            >
               <option value="----">-----</option>
               <option value="fs">Fullstack development</option>
               <option value="bs">Blockchain development</option>
               <option value="IR"> phone repair</option>
             </select>
 
-
-
-            <label htmlFor="serviceUserRequest" className="text-white text-lg mb-2">
+            <label
+              htmlFor="serviceUserRequest"
+              className="text-white text-lg mb-2"
+            >
               Description:
             </label>
             <textarea
@@ -107,10 +141,19 @@ const JobRequestModal = () => {
               id="serviceUserRequest"
             />
 
-
-
-            <button className="p-4 bg-[#444] hover:bg-[#222] font-bold">submit</button>
-
+            {!isValidSign ? (
+              <button
+                onClick={handleSignature}
+                className="p-4 bg-[#444] hover:bg-[#222] font-bold"
+                type="button"
+              >
+                sign
+              </button>
+            ) : (
+              <button className="p-4 bg-[#444] hover:bg-[#222] font-bold">
+                submit
+              </button>
+            )}
           </form>
 
           {/* close button */}
@@ -131,7 +174,6 @@ const JobRequestModal = () => {
             </svg>
           </button>
         </div>
-        
       </div>
     </div>
   );
