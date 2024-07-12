@@ -1,10 +1,7 @@
 "use client";
 
+import { SendPM } from "@/app/lib/action";
 import { useModal } from "../hooks/use-modal-store";
-
-
-
-
 
 const SendUserPM = () => {
   const { isOpen, onClose, type, signature } = useModal();
@@ -19,12 +16,12 @@ const SendUserPM = () => {
 
     const formData = new FormData(e.currentTarget);
     formData.append("sessoinUrl", desiredUrl);
-    formData.append("address", signature as string)
+    formData.append("address", signature as string);
 
     try {
-      console.log(signature, desiredUrl)
+      console.log(signature, desiredUrl);
 
-      --(formData)
+      SendPM(formData);
 
       onClose();
     } catch (error) {
@@ -64,10 +61,7 @@ const SendUserPM = () => {
               id="title"
             />
 
-            <label
-              htmlFor="message"
-              className="text-white text-lg mb-2"
-            >
+            <label htmlFor="message" className="text-white text-lg mb-2">
               Message:
             </label>
             <textarea
@@ -77,6 +71,16 @@ const SendUserPM = () => {
               id="message"
             />
 
+            <label htmlFor="userEamil" className="text-white text-lg mb-2">
+              Eamil:
+            </label>
+            <input
+              className="w-full bg-gray-800 text-white rounded-md py-2 px-4 mb-4 overflow-auto resize-none w-full "
+              placeholder="Enter Eamil"
+              type="email"
+              name="userEamil"
+              id="userEamil"
+            />
 
             <button
               type="submit"
@@ -103,7 +107,6 @@ const SendUserPM = () => {
               />
             </svg>
           </button>
-
         </div>
       </div>
     </div>

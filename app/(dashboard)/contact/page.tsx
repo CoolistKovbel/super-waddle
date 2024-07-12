@@ -1,4 +1,5 @@
 import ContactForm from "@/app/components/contact-form";
+import PriaveMessageComp from "@/app/components/private-message-comp";
 
 const Page = async () => {
   return (
@@ -43,6 +44,9 @@ const Page = async () => {
             <p className="text-gray-400">noEmail@yet.com</p>
           </div>
         </div>
+
+      <PriaveMessageComp />
+
       </div>
     </main>
   );

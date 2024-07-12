@@ -1,6 +1,7 @@
 "use server";
 
 import { MoneyPaymentRequest } from "../models/MoneyPayment";
+import { PrivateMEssagetRequest } from "../models/PrivateMessage";
 import { ServiceRequest } from "../models/ServiceReq";
 import { WaitList } from "../models/WaitList";
 import dbConnect from "./db";
@@ -8,13 +9,11 @@ import dbConnect from "./db";
 import { sendMail } from "./mail";
 import { SendContactEmail } from "./schema";
 
-
 export async function whiteList(formData: FormData) {
   const email = formData.get("email");
 
   try {
-
-    await dbConnect()
+    await dbConnect();
 
     const NewMember = new WaitList({
       email: email,
@@ -64,61 +63,85 @@ export async function ContactEmail(
   }
 }
 
-export const requestServoce = async  (e:FormData) => {
-  const data = Object.fromEntries(e)
+export const requestServoce = async (e: FormData) => {
+  const data = Object.fromEntries(e);
 
   try {
-    console.log("send service request to servicer")
+    console.log("send service request to servicer");
 
-
-    await dbConnect()
+    await dbConnect();
 
     const newSerice = new ServiceRequest({
       serviceType: data.serviceType,
       serviceUserRequest: data.serviceUserRequest,
       username: data.username,
       useremail: data.email,
-    })
+    });
 
-    await newSerice.save()
+    await newSerice.save();
 
-
-  return {
-    status: "success",
-    payload: ""
-  }
-
-    
+    return {
+      status: "success",
+      payload: "",
+    };
   } catch (error) {
-    console.log(error)
+    console.log(error);
   }
-}
+};
 
-
-export const SendExpressPayment = async (e:FormData) =>{
-  const data = Object.fromEntries(e)
+export const SendExpressPayment = async (e: FormData) => {
+  const data = Object.fromEntries(e);
   try {
-    // connecting to  the db 
-    await dbConnect()
+    // connecting to  the db
+    await dbConnect();
     // create a money order
     const newOrder = new MoneyPaymentRequest({
       MoneyPaymentID: data.transactoinId,
       MetaAddress: data.metaAddress,
-    })
-    await newOrder.save()
+    });
+    await newOrder.save();
     // send money order
 
     // record money order
 
+    return {
+      status: "success",
+      payload: newOrder,
+    };
+  } catch (error) {
+    console.log("error", error);
+  }
+};
 
+export const SendPM = async (e: FormData) => {
+  const data = Object.fromEntries(e);
+  try {
+    const payload: any = {
+      to: process.env.SMTP_EMAIL as string,
+      name: "qano",
+      subject: data.title,
+      content: data.message,
+    };
+
+    await sendMail(payload);
+
+    const newPM = new PrivateMEssagetRequest({
+      subject: data.title,
+      from: "nameenornaddres",
+      MetaAddress: data.signature,
+      content: data.message,
+    });
+
+    await newPM.save();
 
     return {
       status: "success",
-      payload: newOrder
-    }
-
+      payload: newPM,
+    };
   } catch (error) {
-    console.log("error",error)
+    return {
+      status: "error",
+      payload: error,
+    };
   }
-}
-
+};
