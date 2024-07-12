@@ -1,14 +1,28 @@
 "use client"
 
+import { ethers } from "ethers";
 import { useModal } from "./hooks/use-modal-store";
+import { useEffect, useState } from "react";
 
 
 
 const PriaveMessageComp = () => {
+    const[userAddress, setUserAddress] = useState()
+
+    useEffect(() => {
+        const gg = async ( ) => {
+            const provider = new ethers.providers.Web3Provider(window.ethereum);
+            const signer = provider.getSigner()
+            const address:any =  await signer.getAddress()
+            setUserAddress(address)
+        }
+
+    },[])
+
     const {onOpen} = useModal()
 
     const handPrivateMessage = () => {
-        onOpen("SendUserPM")
+        onOpen("SendUserPM", userAddress)
     }
 
 

@@ -2,6 +2,7 @@
 
 import { SendPM } from "@/app/lib/action";
 import { useModal } from "../hooks/use-modal-store";
+import { toast } from "react-toastify";
 
 const SendUserPM = () => {
   const { isOpen, onClose, type, signature } = useModal();
@@ -21,7 +22,11 @@ const SendUserPM = () => {
     try {
       console.log(signature, desiredUrl);
 
-      SendPM(formData);
+      const res = await SendPM(formData);
+
+      if(res.status === "success") {
+        toast("private message sent")
+      }
 
       onClose();
     } catch (error) {
