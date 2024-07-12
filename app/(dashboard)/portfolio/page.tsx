@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const Page = async () => {
   
   const projects = [
@@ -9,6 +11,7 @@ const Page = async () => {
       profojetImage: "/banner-test.png",
       desription: `A small decentralized application invovles solidity and javascript
         using, ethers and nextjs, and typescript to created this project. `,
+        link: `/${crypto.randomUUID()}`
     },
     {
       title: "BeaconPulseWave",
@@ -17,6 +20,7 @@ const Page = async () => {
       profojetImage: "/banner-test.png",
       desription: `A small decentralized application invovles solidity and javascript
         using, ethers and nextjs, and typescript to created this project. `,
+        link: `/${crypto.randomUUID()}`
     },
   ];
 
@@ -42,6 +46,7 @@ const Page = async () => {
                 <p>{item.desription}</p>
               </header>
               <span className="absolute">{item.type}</span>
+              <Link href={`/project${item.link}`}>{item.link.slice(0, 8)}</Link>
             </div>
           ))}
         </div>

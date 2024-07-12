@@ -159,6 +159,32 @@ const Page = async () => {
 
         </section>
 
+
+        <section className="w-full bg-[#222] border-2 p-3 shadow-lg rounded-md">
+          <h2>Buisness Expensaion service</h2>
+          <p>This is a group of services i can provide that would be for the ideal buisness</p>
+          <ul>
+            <li>
+              <span>Buisness Marketing</span>
+              <p>Help buisness setup a marketing campaign</p>
+            </li>
+            <li>
+              <span>Buisness Profile Management</span>
+              <p>Help buid buisness profile</p>
+            </li>
+            <li>
+              <span>Buisness Branching Service</span>
+              <p>help with target audience</p>
+            </li>
+            <li>
+              <span>Buisness Startup Security</span>
+              <p>help with getting the requirements needed for buisness brand and securly starting up your very own buisness</p>
+            </li>
+          </ul>
+        </section>
+
+
+
       </div>
 
       {/* 
