@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+
 import MainHeader from "./components/main-header/main-header";
 import "./globals.css";
 import { ModalProvider } from "./components/providers/model-provider";
 import { ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { inter } from "./components/ui/fonts";
 
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "LyubsDevCyberStop",

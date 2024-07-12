@@ -17,6 +17,8 @@ const PriaveMessageComp = () => {
             setUserAddress(address)
         }
 
+        gg()
+
     },[])
 
     const {onOpen} = useModal()

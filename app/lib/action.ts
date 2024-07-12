@@ -115,28 +115,38 @@ export const SendExpressPayment = async (e: FormData) => {
 
 export const SendPM = async (e: FormData) => {
   const data = Object.fromEntries(e);
+  const contentMessage = data.message as string
   try {
-    const payload: any = {
+    console.log("conntectingto email")
+    await dbConnect()
+
+    console.log("send email")
+
+    const payload = JSON.stringify({subject: data.title,
+      from: "nameenornaddres",
+      MetaAddress: data.address,
+      content: data.message})
+
+    await sendMail({
       to: process.env.SMTP_EMAIL as string,
       name: "qano",
-      subject: data.title,
-      content: data.message,
-    };
-
-    await sendMail(payload);
-
+      subject: data.title as string,
+      content: contentMessage.concat(payload),
+    });
+    console.log("send data to server")
     const newPM = new PrivateMEssagetRequest({
       subject: data.title,
       from: "nameenornaddres",
-      MetaAddress: data.signature,
-      content: data.message,
+      MetaAddress: data.address,
+      content: contentMessage,
     });
-
+    console.log("save data created by user client")
     await newPM.save();
 
+    console.log("sending user data to client")
     return {
       status: "success",
-      payload: newPM,
+      payload: data.message as string,
     };
   } catch (error) {
     return {

@@ -21,13 +21,18 @@ const SendUserPM = () => {
 
     try {
       console.log(signature, desiredUrl);
-
+      const form  = e.target as HTMLFormElement
       const res = await SendPM(formData);
 
       if(res.status === "success") {
+        console.log("satus okat")
         toast("private message sent")
-      }
+      }   
 
+      console.log("----------")
+      console.log(res)
+      
+      form.reset()
       onClose();
     } catch (error) {
       console.error("Error:", error);
