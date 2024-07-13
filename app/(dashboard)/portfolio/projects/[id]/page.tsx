@@ -34,11 +34,11 @@ const Page = async ({
     ]
 
 
-    const GatherPorfolioDetails = async function (){
+    const GatherPorfolioDetails = async function (proftolios: any){
         return (
             <section>
                 {
-                    data.map((item) => (
+                    proftolios.map((item:any) => (
                         <article key={crypto.randomUUID()}>
 
                             <header>
@@ -48,7 +48,7 @@ const Page = async ({
                                 </div>
                                 <div className='w-[300px] h-[300px] relative'>
                                     {
-                                        item.images.map((item) => <Image key={crypto.randomUUID()} src={item} alt="imgage" fill />)
+                                        item.images.map((item:any) => <Image key={crypto.randomUUID()} src={item} alt="imgage" fill />)
                                     }
                                 </div>
                             </header>
@@ -87,7 +87,7 @@ const Page = async ({
     <main className='w-full min-h-screen'>
 
         
-        <GatherPorfolioDetails />
+        <GatherPorfolioDetails proftolios={data} />
     
 
     </main>
