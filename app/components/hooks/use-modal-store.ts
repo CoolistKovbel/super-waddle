@@ -1,7 +1,7 @@
 
 import { create } from "zustand";
 
-export type ModalType =  "SendUserPM" | "SendPayment" | "SendServicesRequest" | "SendExpressPayment"
+export type ModalType =  "SendUserPM" | "SendPayment" | "SendServicesRequest" | "SendExpressPayment" | "addPortfolio"
 
 interface ModalData {
   server?: any;
