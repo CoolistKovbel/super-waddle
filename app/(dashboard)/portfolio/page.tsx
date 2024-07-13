@@ -3,7 +3,6 @@ import Link from "next/link";
 const Page = async () => {
   
   const projects = [
- 
     {
       title: "Phontunelightway",
       type: "defi app",
@@ -16,6 +15,33 @@ const Page = async () => {
     {
       title: "BeaconPulseWave",
       type: "defi app",
+      category: "DEFI",
+      profojetImage: "/banner-test.png",
+      desription: `A small decentralized application invovles solidity and javascript
+        using, ethers and nextjs, and typescript to created this project. `,
+        link: `/${crypto.randomUUID()}`
+    },
+    {
+      title: "Pinnote",
+      type: "Social Service App",
+      category: "DEFI",
+      profojetImage: "/banner-test.png",
+      desription: `A small decentralized application invovles solidity and javascript
+        using, ethers and nextjs, and typescript to created this project. `,
+        link: `/${crypto.randomUUID()}`
+    },
+    {
+      title: "PrimeBlossom",
+      type: "defi app",
+      category: "DEFI",
+      profojetImage: "/banner-test.png",
+      desription: `A small decentralized application invovles solidity and javascript
+        using, ethers and nextjs, and typescript to created this project. `,
+        link: `/${crypto.randomUUID()}`
+    },
+    {
+      title: "Mystic Murko",
+      type: "chat group app",
       category: "DEFI",
       profojetImage: "/banner-test.png",
       desription: `A small decentralized application invovles solidity and javascript
@@ -40,13 +66,15 @@ const Page = async () => {
         <div className="flex items-center justify-center flex-col ">
 
           {projects.map((item) => (
-            <div key={crypto.randomUUID()} className="w-[300px] h-[300px] p-4 relative  mt-10">
-              <header >
-                <h2 className="text-2xl">{item.title}</h2>
-                <p>{item.desription}</p>
+            <div key={crypto.randomUUID()} className="w-[300px] md:w-[800px] h-[300px] p-4 relative bg-[#444] rounded mt-10 flex flex-col justify-between gap-4">
+              <header className=" p-2">
+                <h2 className="text-2xl text-6xl font-bold">{item.title}</h2>
+                <p className="mt-3 text-gray-500 hover:text-gray-200">{item.desription}</p>
               </header>
-              <span className="absolute">{item.type}</span>
-              <Link href={`/project${item.link}`}>{item.link.slice(0, 8)}</Link>
+              <span className="absolute right-0 bg-[#222] p-2 -top-5 font-bold rounded drop-shadow-lg">{item.type}</span>
+              <nav>
+                <Link href={`/portfolio/projects${item.link}`} className="p-2 font-bold text-emerald-500 bg-[#222] rounded hover:bg-[#444]">{item.link.slice(0, 8)}</Link>
+              </nav>
             </div>
           ))}
         </div>

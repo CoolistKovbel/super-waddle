@@ -124,9 +124,9 @@ const Page = async () => {
         <section className="w-full bg-[#222] border-2 p-3 shadow-lg rounded-md">
           <h2 className="text-2xl font-bold">Basic Computer & Phone Support</h2>
 
-          <ul>
+          <ul className="list-disc p-5">
             <li>
-              <span>Macbook Reboot Basic</span>
+              <span className="bg-[#000] inline-block p-1 rounded-md">Macbook Reboot Basic</span>
               <ul>
                 <li>Schedule meet up</li>
               </ul>
@@ -150,7 +150,7 @@ const Page = async () => {
             </li>
 
             <li>
-              Phone Reboot Basic
+              <span className="bg-[#000] inline-block p-1 rounded-md">Phone Reboot Basic</span>
               <ul>
                 <li>Schedule meet up</li>
               </ul>
@@ -161,23 +161,23 @@ const Page = async () => {
 
 
         <section className="w-full bg-[#222] border-2 p-3 shadow-lg rounded-md">
-          <h2>Buisness Expensaion service</h2>
+          <h2 className="text-2xl font-bold">Buisness Expensaion service</h2>
           <p>This is a group of services i can provide that would be for the ideal buisness</p>
-          <ul>
+          <ul className="list-disc p-5">
             <li>
-              <span>Buisness Marketing</span>
+              <span className="bg-[#000] inline-block p-1 rounded-md">Buisness Marketing</span>
               <p>Help buisness setup a marketing campaign</p>
             </li>
             <li>
-              <span>Buisness Profile Management</span>
+              <span className="bg-[#000] inline-block p-1 rounded-md">Buisness Profile Management</span>
               <p>Help buid buisness profile</p>
             </li>
             <li>
-              <span>Buisness Branching Service</span>
+              <span className="bg-[#000] inline-block p-1 rounded-md">Buisness Branching Service</span>
               <p>help with target audience</p>
             </li>
             <li>
-              <span>Buisness Startup Security</span>
+              <span className="bg-[#000] inline-block p-1 rounded-md">Buisness Startup Security</span>
               <p>help with getting the requirements needed for buisness brand and securly starting up your very own buisness</p>
             </li>
           </ul>
