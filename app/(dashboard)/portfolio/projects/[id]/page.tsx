@@ -34,7 +34,7 @@ const Page = async ({
     ]
 
 
-    const gatherPorfolioDetails = async function (){
+    const GatherPorfolioDetails = async function (){
         return (
             <section>
                 {
@@ -87,6 +87,7 @@ const Page = async ({
     <main className='w-full min-h-screen'>
 
         
+        <GatherPorfolioDetails />
     
 
     </main>
