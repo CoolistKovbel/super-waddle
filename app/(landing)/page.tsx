@@ -9,7 +9,9 @@ import Link from "next/link";
 export default function Home() {
   return (
     <main className="min-h-screen w-full bg-[#000] text-white">
+      {/* bg */}
       <WavyBackground>
+
         <div className="w-full p-3 h-[400px] mb-[100px] flex items-center justify-center">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-5xl font-bold mb-4 capitalize">
@@ -17,7 +19,7 @@ export default function Home() {
             </h2>
             <p className="text-2xl font-bold mb-3">Ecostatic</p>
 
-            <p className="text-sm lowercase text-gray-300 font-semibold text-shadow-lg w-[80%] mx-auto">
+            <p className="text-sm captialize lowercase text-gray-300 font-semibold text-shadow-lg w-[80%] mx-auto">
               Struggling trying to get the internet working, cant seem to get
               enough attention for your buisness, need a website or a smart
               contract? I can help you with that..
@@ -35,7 +37,7 @@ export default function Home() {
           />
 
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl font-bold captilize mb-2">
+            <h2 className="text-4xl font-bold captilize mb-2 captilize">
               With Tech advancing and programs updating its sometimes hard to
               keep up
             </h2>
@@ -85,6 +87,7 @@ export default function Home() {
             </div>
           </div>
         </div>
+
       </WavyBackground>
 
       <EmailList />

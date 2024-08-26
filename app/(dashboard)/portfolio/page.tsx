@@ -15,10 +15,10 @@ const Page = async () => {
       title: "BeaconPulseWave",
       type: "defi app",
       category: "DEFI",
-      profojetImage: "/banner-test.png",
+      profojetImage: "/beaconlnight.png",
       desription: `A small decentralized application invovles solidity and javascript
         using, ethers and nextjs, and typescript to created this project. `,
-      link: `/${crypto.randomUUID()}`,
+      link: `/$  {crypto.randomUUID()}`,
     },
     {
       title: "Pinnote",
@@ -46,6 +46,42 @@ const Page = async () => {
       desription: `A small decentralized application invovles solidity and javascript
         using, ethers and nextjs, and typescript to created this project. `,
       link: `/${crypto.randomUUID()}`,
+    },
+    {
+      title: "Ezuaid",
+      type: "Resale app",
+      category: "SHOP",
+      profojetImage: "https://picsum.photos/200",
+      desription: `A small decentralized application invovles solidity and javascript
+        using, ethers and nextjs, and typescript to created this project. `,
+      link: `/$  {crypto.randomUUID()}`,
+    },
+    {
+      title: "rocketrawr",
+      type: "deAppGame",
+      category: "GAME",
+      profojetImage: "https://picsum.photos/200",
+      desription: `A small decentralized application invovles solidity and javascript
+        using, ethers and reactjs, and typescript to created this project. `,
+      link: `/$  {crypto.randomUUID()}`,
+    },
+    {
+      title: "DeBlock",
+      type: "deAppGame",
+      category: "GAME",
+      profojetImage: "https://picsum.photos/200",
+      desription: `A small decentralized application invovles solidity and javascript
+        using, ethers and reactjs, and typescript to created this project. `,
+      link: `/$  {crypto.randomUUID()}`,
+    },
+    {
+      title: "BatteryRecShop",
+      type: "deAppStore",
+      category: "Store",
+      profojetImage: "https://picsum.photos/200",
+      desription: `A small decentralized application invovles the blockchain and javascript
+        using, ethers and reactjs, and typescript to created this project. `,
+      link: `/$  {crypto.randomUUID()}`,
     },
   ];
 

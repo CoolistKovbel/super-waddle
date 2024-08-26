@@ -1,9 +1,6 @@
 import ExpressRequest from "@/app/components/expressRequest";
 
 const Page = async () => {
-
-
-
   return (
     <main className="min-h-screen w-full bg-[#111] text-white flex items-center justify-center flex-col gap-4">
       {/* section header */}
@@ -17,7 +14,6 @@ const Page = async () => {
       </header>
 
       <div className="w-[90%]  md:w-[80%] flex items-center justify-center gap-4 flex-col">
-
         <section className="w-full bg-[#222] border-2 p-3 shadow-lg rounded-md">
           <header className="mb-3 ">
             <h2 className="text-2xl font-bold">Web devlopment</h2>
@@ -102,7 +98,6 @@ const Page = async () => {
         
         */}
 
-
         <section className="w-full bg-[#222] border-2 p-3 shadow-lg rounded-md">
           <header className="mb-3">
             <h2 className="text-2xl font-bold">Project Development</h2>
@@ -118,7 +113,6 @@ const Page = async () => {
             <li>NFT minting website</li>
             <li>Token Faucet website</li>
           </ul>
-
         </section>
 
         <section className="w-full bg-[#222] border-2 p-3 shadow-lg rounded-md">
@@ -126,7 +120,9 @@ const Page = async () => {
 
           <ul className="list-disc p-5">
             <li>
-              <span className="bg-[#000] inline-block p-1 rounded-md">Macbook Reboot Basic</span>
+              <span className="bg-[#000] inline-block p-1 rounded-md">
+                Macbook Reboot Basic
+              </span>
               <ul>
                 <li>Schedule meet up</li>
               </ul>
@@ -150,38 +146,54 @@ const Page = async () => {
             </li>
 
             <li>
-              <span className="bg-[#000] inline-block p-1 rounded-md">Phone Reboot Basic</span>
+              <span className="bg-[#000] inline-block p-1 rounded-md">
+                Phone Reboot Basic
+              </span>
               <ul>
                 <li>Schedule meet up</li>
               </ul>
             </li>
           </ul>
-
         </section>
-
 
         <section className="w-full bg-[#222] border-2 p-3 shadow-lg rounded-md">
           <h2 className="text-2xl font-bold">Buisness Expensaion service</h2>
-          <p>This is a group of services i can provide that would be for the ideal buisness</p>
+          <p>
+            This is a group of services i can provide that would be for the
+            ideal buisness
+          </p>
           <ul className="list-disc p-5">
             <li>
-              <span className="bg-[#000] inline-block p-1 rounded-md">Buisness Marketing</span>
+              <span className="bg-[#000] inline-block p-1 rounded-md">
+                Buisness Marketing
+              </span>
               <p>Help buisness setup a marketing campaign</p>
             </li>
             <li>
-              <span className="bg-[#000] inline-block p-1 rounded-md">Buisness Profile Management</span>
+              <span className="bg-[#000] inline-block p-1 rounded-md">
+                Buisness Profile Management
+              </span>
               <p>Help buid buisness profile</p>
             </li>
             <li>
-              <span className="bg-[#000] inline-block p-1 rounded-md">Buisness Branching Service</span>
+              <span className="bg-[#000] inline-block p-1 rounded-md">
+                Buisness Branching Service
+              </span>
               <p>help with target audience</p>
             </li>
             <li>
-              <span className="bg-[#000] inline-block p-1 rounded-md">Buisness Startup Security</span>
-              <p>help with getting the requirements needed for buisness brand and securly starting up your very own buisness</p>
+              <span className="bg-[#000] inline-block p-1 rounded-md">
+                Buisness Startup Security
+              </span>
+              <p>
+                help with getting the requirements needed for buisness brand and
+                securly starting up your very own buisness
+              </p>
             </li>
           </ul>
         </section>
+
+
 
 
 
@@ -192,6 +204,8 @@ const Page = async () => {
           TODO: finish up the UI
         
       */}
+
+      {/* Payment system */}
       <ExpressRequest />
 
       <footer className="p-4 text-sm text-gray-500">
