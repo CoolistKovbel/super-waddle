@@ -19,25 +19,20 @@ const ExpressRequest = () => {
     try {
       console.log("handle exprees payout");
 
-
       onOpen("SendExpressPayment");
-
-
-      
     } catch (eror) {
       console.log(eror);
     }
   };
 
   return (
-    <section className="w-[40%] mx-auto p-10 flex items-center justify-between flex-col gap-5">
+    <section className="w-[60%] mx-auto p-10 flex items-center justify-between flex-col gap-5">
 
       <header>
         <h2 className="text-4xl font-bold text-center">Express Request: </h2>
       </header>
 
       <div className="flex items-center justify-center gap-4 w-[80%]">
-
         <div className="w-full flex items-center justify-around">
           <button
             onClick={handleExpressClientRequest}
@@ -55,6 +50,7 @@ const ExpressRequest = () => {
           </button>
         </div>
       </div>
+
     </section>
   );
 };

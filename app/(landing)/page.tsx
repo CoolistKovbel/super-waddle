@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { ToastContainer } from "react-toastify";
 import { WavyBackground } from "../components/ui/wavy-background";
 import { FaClipboardList, FaClipboardUser } from "react-icons/fa6";
 import { EmailList } from "../components/waitlist/emailList";
@@ -11,15 +10,14 @@ export default function Home() {
     <main className="min-h-screen w-full bg-[#000] text-white">
       {/* bg */}
       <WavyBackground>
-
         <div className="w-full p-3 h-[400px] mb-[100px] flex items-center justify-center">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-5xl font-bold mb-4 capitalize">
-              Have tech problems or need some assistance?
+              Have tech problems or need a website?
             </h2>
-            <p className="text-2xl font-bold mb-3">Ecostatic</p>
+            <p className="text-2xl font-bold my-3 text-gray-300">Ecostatic</p>
 
-            <p className="text-sm captialize lowercase text-gray-300 font-semibold text-shadow-lg w-[80%] mx-auto">
+            <p className="text-sm captialize lowercase text-gray-500 font-semibold text-shadow-lg w-[80%] mx-auto">
               Struggling trying to get the internet working, cant seem to get
               enough attention for your buisness, need a website or a smart
               contract? I can help you with that..
@@ -43,9 +41,8 @@ export default function Home() {
             </h2>
 
             <p className="text-sm">
-              Currently specializing in full stack web development as well as
-              small tech gadget restoration, from iphones to computers making
-              sure your tech request is fufilled
+              From iphones to computers making sure your tech request is
+              fufilled as well as specializing in full stack web development
             </p>
 
             <p className="font-bold mt-2">Dont be a loser, spread some love</p>
@@ -87,14 +84,60 @@ export default function Home() {
             </div>
           </div>
         </div>
-
       </WavyBackground>
 
       <EmailList />
 
       <MintSec />
 
-      <ToastContainer />
+
+      <div className="flex items-center justify-center gap-5 p-10 bg-[#222]">
+
+          <div className="w-[50%] p-5 bg-[#555] drop-shadow-lg rounded">
+            <h2 className="text-2xl font-bold mb-4">Affilicate:</h2>
+            <ul className="flex flex-col gap-4">
+              <li className="bg-[#222] text-xl p-2 rounded drop-shadow-lg hover:bg-[#111]">
+                <a href="#">Crypto</a>
+              </li>
+              <li className="bg-[#222] text-xl p-2 rounded drop-shadow-lg hover:bg-[#111]">
+                <a href="#">CashApp</a>
+              </li>
+              <li className="bg-[#222] text-xl p-2 rounded drop-shadow-lg hover:bg-[#111]">
+                <a href="#">Coinbase</a>
+              </li>
+              <li className="bg-[#222] text-xl p-2 rounded drop-shadow-lg hover:bg-[#111]">
+                <a href="#">Kraken</a>
+              </li>
+              <li className="bg-[#222] text-xl p-2 rounded drop-shadow-lg hover:bg-[#111]">
+                <a href="#">Kukoin</a>
+              </li>
+              <li className="bg-[#222] text-xl p-2 rounded drop-shadow-lg hover:bg-[#111]">
+                <a href="#">bluehost</a>
+              </li>
+            </ul>
+          </div>
+
+
+          <div className="w-[30%] p-5 bg-[#555] drop-shadow-lg rounded">
+            <h2 className="text-2xl font-bold mb-4">Bazar:</h2>
+            <ul className="flex flex-col gap-4">
+              <li className="bg-[#222] p-2 rounded drop-shadow-lg hover:bg-[#111]">
+                <a href="#">CyberShed.store</a>
+              </li>
+              <li className="bg-[#222] p-2 rounded drop-shadow-lg hover:bg-[#111]">
+                <a href="#">urbenflexforge.com</a>
+              </li>
+              <li className="bg-[#222] p-2 rounded drop-shadow-lg hover:bg-[#111]">
+                <a href="#">urbenflexforge.com</a>
+              </li>
+            </ul>
+          </div>
+
+
+
+      </div>
+
+
     </main>
   );
 }
