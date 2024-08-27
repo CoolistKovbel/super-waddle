@@ -97,23 +97,23 @@ export default function Home() {
             <h2 className="text-2xl font-bold mb-4">Affilicate:</h2>
             <ul className="flex flex-col gap-4">
               <li className="bg-[#222] text-xl p-2 rounded drop-shadow-lg hover:bg-[#111]">
-                <a href="#">Crypto</a>
+                <a href="https://crypto.com/app/y8yjabr8my" target="_blank">Crypto</a>
               </li>
               <li className="bg-[#222] text-xl p-2 rounded drop-shadow-lg hover:bg-[#111]">
-                <a href="#">CashApp</a>
+                <a href="https://cash.app/app/H1W6G6Z" target="_blank">CashApp</a>
               </li>
               <li className="bg-[#222] text-xl p-2 rounded drop-shadow-lg hover:bg-[#111]">
                 <a href="#">Coinbase</a>
               </li>
-              <li className="bg-[#222] text-xl p-2 rounded drop-shadow-lg hover:bg-[#111]">
+              {/* <li className="bg-[#222] text-xl p-2 rounded drop-shadow-lg hover:bg-[#111]">
                 <a href="#">Kraken</a>
-              </li>
+              </li> */}
               <li className="bg-[#222] text-xl p-2 rounded drop-shadow-lg hover:bg-[#111]">
                 <a href="#">Kukoin</a>
               </li>
-              <li className="bg-[#222] text-xl p-2 rounded drop-shadow-lg hover:bg-[#111]">
+              {/* <li className="bg-[#222] text-xl p-2 rounded drop-shadow-lg hover:bg-[#111]">
                 <a href="#">bluehost</a>
-              </li>
+              </li> */}
             </ul>
           </div>
 
